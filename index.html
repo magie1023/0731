@@ -141,6 +141,18 @@
             margin-bottom: 6px;
         }
 
+        /* 注音 (rt) 樣式設定 */
+        rt {
+            font-size: 0.55em;
+            color: #2563eb;
+            font-weight: normal;
+            user-select: none;
+        }
+
+        ruby {
+            ruby-position: over; /* 讓注音顯示在國字上方 */
+        }
+
         .card .desc {
             font-size: 1.05rem;
             color: #475569;
@@ -207,7 +219,9 @@
         <!-- 1. 猜畫小手 (Google AI) -->
         <div class="card" data-category="art" onclick="openGame('https://quickdraw.withgoogle.com/?hl=zh_TW')">
             <div class="icon-wrapper">✏️</div>
-            <div class="title">猜畫小手</div>
+            <div class="title">
+                <ruby>猜<rt>ㄘㄞ</rt></ruby><ruby>畫<rt>ㄏㄨㄚˋ</rt></ruby><ruby>小<rt>ㄒㄧㄠˇ</rt></ruby><ruby>手<rt>ㄕㄡˇ</rt></ruby>
+            </div>
             <div class="desc">Google AI 猜畫遊戲！用手畫圖讓電腦猜猜看</div>
             <button class="speak-btn" onclick="speakText(event, '猜畫小手。用手畫圖讓電腦猜猜看')">🔊 聽名字</button>
         </div>
@@ -215,7 +229,9 @@
         <!-- 2. Chrome 音樂實驗室 -->
         <div class="card" data-category="art" onclick="openGame('https://musiclab.chromeexperiments.com/')">
             <div class="icon-wrapper">🎵</div>
-            <div class="title">音樂實驗室</div>
+            <div class="title">
+                <ruby>音<rt>ㄧㄣ</rt></ruby><ruby>樂<rt>ㄩㄝˋ</rt></ruby><ruby>實<rt>ㄕˊ</rt></ruby><ruby>驗<rt>ㄧㄢˋ</rt></ruby><ruby>室<rt>ㄕˋ</rt></ruby>
+            </div>
             <div class="desc">用手指畫線就能變出音樂，好玩又動聽！</div>
             <button class="speak-btn" onclick="speakText(event, '音樂實驗室。用手指畫線變出聲音')">🔊 聽名字</button>
         </div>
@@ -223,7 +239,9 @@
         <!-- 3. 猴子程式大冒險 (Code Monkey) -->
         <div class="card" data-category="brain" onclick="openGame('https://www.culinaryschools.org/kids-games/code-monkey/')">
             <div class="icon-wrapper">🐒</div>
-            <div class="title">猴子程式大冒險</div>
+            <div class="title">
+                <ruby>猴<rt>ㄏㄡˊ</rt></ruby><ruby>子<rt>ㄗ˙</rt></ruby><ruby>程<rt>ㄔㄥˊ</rt></ruby><ruby>式<rt>ㄕˋ</rt></ruby><ruby>大<rt>ㄉㄚˋ</rt></ruby><ruby>冒<rt>ㄇㄠˋ</rt></ruby><ruby>險<rt>ㄒㄧㄢˇ</rt></ruby>
+            </div>
             <div class="desc">引導小猴子吃香蕉，輕鬆學習基礎程式邏輯！</div>
             <button class="speak-btn" onclick="speakText(event, '猴子程式大冒險。引導小猴子吃香蕉，學習程式邏輯')">🔊 聽名字</button>
         </div>
@@ -231,7 +249,9 @@
         <!-- 4. Wordwall 互動語文與遊戲 -->
         <div class="card" data-category="learn" onclick="openGame('https://wordwall.net/zh-tw/community')">
             <div class="icon-wrapper">🧩</div>
-            <div class="title">Wordwall 遊戲</div>
+            <div class="title">
+                Wordwall <ruby>遊<rt>ㄧㄡˊ</rt></ruby><ruby>戲<rt>ㄒㄧˋ</rt></ruby>
+            </div>
             <div class="desc">打地鼠、翻牌配對、幸運轉盤等中文遊戲</div>
             <button class="speak-btn" onclick="speakText(event, 'Word wall 中文互動遊戲')">🔊 聽名字</button>
         </div>
@@ -239,7 +259,9 @@
         <!-- 5. Code.org 兒童程式闖關 (繁體中文) -->
         <div class="card" data-category="brain" onclick="openGame('https://studio.code.org/hoc/1')">
             <div class="icon-wrapper">💻</div>
-            <div class="title">程式小迷宮</div>
+            <div class="title">
+                <ruby>程<rt>ㄔㄥˊ</rt></ruby><ruby>式<rt>ㄕˋ</rt></ruby><ruby>小<rt>ㄒㄧㄠˇ</rt></ruby><ruby>迷<rt>ㄇㄧˊ</rt></ruby><ruby>宮<rt>ㄍㄨㄥ</rt></ruby>
+            </div>
             <div class="desc">繁體中文介面，拖拉積木幫角色走迷宮破關</div>
             <button class="speak-btn" onclick="speakText(event, '程式小迷宮。幫忙角色走迷宮破關')">🔊 聽名字</button>
         </div>
@@ -247,7 +269,9 @@
         <!-- 6. PBS 兒童樂園 -->
         <div class="card" data-category="learn" onclick="openGame('https://pbskids.org/games')">
             <div class="icon-wrapper">🐾</div>
-            <div class="title">PBS 兒童網</div>
+            <div class="title">
+                PBS <ruby>兒<rt>ㄦˊ</rt></ruby><ruby>童<rt>ㄊㄨㄥˊ</rt></ruby><ruby>網<rt>ㄨㄤˇ</rt></ruby>
+            </div>
             <div class="desc">豐富的可愛動物角色，陪你探索動腦遊戲</div>
             <button class="speak-btn" onclick="speakText(event, 'PBS 兒童網。可愛動物遊戲')">🔊 聽名字</button>
         </div>
@@ -255,7 +279,9 @@
         <!-- 7. Starfall 語文數感網 -->
         <div class="card" data-category="learn" onclick="openGame('https://www.starfall.com')">
             <div class="icon-wrapper">⭐️</div>
-            <div class="title">Starfall 樂園</div>
+            <div class="title">
+                Starfall <ruby>樂<rt>ㄌㄜˋ</rt></ruby><ruby>園<rt>ㄩㄢˊ</rt></ruby>
+            </div>
             <div class="desc">趣味 ABC 自然發音與基礎數字互動小遊戲</div>
             <button class="speak-btn" onclick="speakText(event, 'Star fall 英文與數字樂園')">🔊 聽名字</button>
         </div>
@@ -263,7 +289,9 @@
         <!-- 8. Scratch 兒童創作與遊戲 -->
         <div class="card" data-category="brain" onclick="openGame('https://scratch.mit.edu/explore')">
             <div class="icon-wrapper">🐱</div>
-            <div class="title">Scratch 遊戲區</div>
+            <div class="title">
+                Scratch <ruby>遊<rt>ㄧㄡˊ</rt></ruby><ruby>戲<rt>ㄒㄧˋ</rt></ruby><ruby>區<rt>ㄑㄩ</rt></ruby>
+            </div>
             <div class="desc">探索上萬種國小學生製作的簡易互動小遊戲</div>
             <button class="speak-btn" onclick="speakText(event, 'Scratch 互動小遊戲聚寶盆')">🔊 聽名字</button>
         </div>
