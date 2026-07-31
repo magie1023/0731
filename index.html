@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>快樂學習小天地</title>
+    <style>
+        /* 基礎樣式設定 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            -webkit-tap-highlight-color: transparent; /* 移除平板觸控時的灰色背景 */
+            user-select: none; /* 防止學生誤選文字 */
+        }
+
+        body {
+            background-color: #f0f9ff;
+            background-image: radial-gradient(#bae6fd 2px, transparent 2px);
+            background-size: 24px 24px; /* 可愛點點背景 */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* 大標題區塊 */
+        header {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #0284c7;
+            text-shadow: 2px 2px 0px #ffffff;
+            margin-bottom: 8px;
+        }
+
+        p.subtitle {
+            font-size: 1.2rem;
+            color: #0369a1;
+            background: #e0f2fe;
+            padding: 6px 16px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        /* 按鈕網格容器 */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+            padding: 10px;
+        }
+
+        /* 卡片按鈕基礎樣式 */
+        .card {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 0px rgba(0, 0, 0, 0.1);
+            border: 4px solid #e0f2fe;
+            transition: transform 0.1s ease, box-shadow 0.1s ease;
+            cursor: pointer;
+        }
+
+        /* 觸控按壓效果（適合平板操作） */
+        .card:active {
+            transform: translateY(6px);
+            box-shadow: 0 2px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 圖示放大 */
+        .card .icon {
+            font-size: 4.5rem;
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+
+        /* 按鈕文字 */
+        .card .title {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #334155;
+            margin-bottom: 4px;
+        }
+
+        .card .desc {
+            font-size: 1rem;
+            color: #64748b;
+        }
+
+        /* 個別卡片的繽紛色彩邊框與主題色 */
+        .card.draw { border-color: #fde047; background: #fefce8; }
+        .card.math { border-color: #86efac; background: #f0fdf4; }
+        .card.english { border-color: #93c5fd; background: #eff6ff; }
+        .card.game { border-color: #f472b6; background: #fdf2f8; }
+
+        /* 平板橫向優化 */
+        @media (min-width: 768px) {
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            .card {
+                padding: 32px;
+            }
+            .card .icon {
+                font-size: 5.5rem;
+            }
+            .card .title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🎨 快樂學習小天地 🚀</h1>
+        <p class="subtitle">點一下圖片，開始玩遊戲吧！</p>
+    </header>
+
+    <main class="menu-grid">
+        <!-- 畫畫遊戲 -->
+        <a href="https://quickdraw.withgoogle.com" target="_blank" class="card draw">
+            <span class="icon">✏️</span>
+            <span class="title">猜畫小手</span>
+            <span class="desc">畫圖讓 AI 猜猜看</span>
+        </a>
+
+        <!--  PBS KIDS 探索 -->
+        <a href="https://pbskids.org/games" target="_blank" class="card english">
+            <span class="icon">🐾</span>
+            <span class="title">PBS 兒童網</span>
+            <span class="desc">可愛動物與好玩遊戲</span>
+        </a>
+
+        <!-- 英語啟蒙 -->
+        <a href="https://www.starfall.com" target="_blank" class="card math">
+            <span class="icon">⭐️</span>
+            <span class="title">Starfall 樂園</span>
+            <span class="desc">學 ABC 與趣味動腦</span>
+        </a>
+
+        <!-- Scratch 創作/遊戲 -->
+        <a href="https://scratch.mit.edu/explore" target="_blank" class="card game">
+            <span class="icon">🐱</span>
+            <span class="title">Scratch 積木</span>
+            <span class="desc">探索好玩的小遊戲</span>
+        </a>
+    </main>
+
+</body>
+</html>
